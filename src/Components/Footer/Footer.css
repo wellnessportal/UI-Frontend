@@ -1,0 +1,45 @@
+.social-container {
+  
+    background-color: #1C3879;
+   
+   padding:2px 5px;
+   text-align: center;
+  
+  }
+  .hiUser{
+   color: white;
+   font-weight: 500;
+  }
+  
+  a.social {
+   margin: 0 1rem;
+   transition: transform 200ms;
+   display: inline-block;
+  
+  }
+  
+  a.social:hover {
+   transform: translateY(-2px);
+  }
+  
+  a.youtube {
+   color: #eee;
+  }
+  
+  a.facebook {
+   color: #eee;
+  }
+  
+  a.twitter {
+   color: #eee;
+  }
+  
+  a.instagram {
+   color: #eee;
+  }
+  .foot{
+   padding-top: 1%;
+    padding-bottom: 1%;
+    color: #eee;
+  
+  }

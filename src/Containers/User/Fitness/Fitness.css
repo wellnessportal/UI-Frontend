@@ -1,0 +1,33 @@
+.fitness {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fitness card-img{
+    width: 50%;
+}
+.fitness .card-img{
+    max-width: 450px;
+}
+.fitness .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fitness button{
+    background-color: #1C3879;
+    color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: large;
+    padding: 0.8%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

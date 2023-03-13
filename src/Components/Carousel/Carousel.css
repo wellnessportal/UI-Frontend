@@ -1,0 +1,15 @@
+.header .carousel{
+    margin-bottom: 10px;
+}
+.header img{
+    /* width: 100%; */
+    width: 1688px;
+    height: 450px;
+    object-fit: cover;
+    object-position: 50% 20%;
+    /* max-height: 500px; */
+    object-position: top;
+}
+.carousel-caption{
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}

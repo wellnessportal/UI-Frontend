@@ -1,0 +1,27 @@
+.logout button{
+    background-color: white;
+    color: #1C3879;
+    border: 1px solid black;
+    font-weight: 500;
+    border-radius: 7px;
+    width: 75px;
+    padding: 7%;
+}
+.logout button:hover{
+    background-color: #b8bbc4;
+    color: white;
+}
+
+.swal-footer { text-align: center; }
+
+.swal-button{
+    padding: 7px 19px;
+    border-radius: 2px;
+    background: #1C3879 !important;
+    text-align: center;
+}
+
+.logout .icon {
+    max-width: 7%;
+    margin: 2%;
+}

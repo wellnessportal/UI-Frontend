@@ -1,0 +1,74 @@
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.nav{
+    position: sticky;
+    top: 0;
+    background-color: #1C3879;
+    z-index: 100;
+}
+.nav logo{
+ width: 4%;
+ margin: 0.5%;
+}
+.nav img{
+    max-width: 100%;
+}
+ul.topnav button{
+    background-color: white;
+    color: #1C3879;
+    border: 1px solid black;
+    font-weight: 500;
+    border-radius: 7px;
+    width: 75px;
+    padding: 7%;
+}
+ul.topnav button:hover{
+    background-color: #b8bbc4;
+    color: white;
+}
+
+ul.topnav {
+    display: flex;
+    flex-direction: row;
+    padding: 0 3% 0 1%;
+    justify-content: space-between;
+    align-items: center;
+    width: 91vw;
+}
+
+ul.topnav li a {
+    font-weight: 600;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover {
+    background-color: #1C3879;
+    color: white;
+    font-weight: 600;
+}
+
+.topnav a:active {
+    background-color: #1C3879;
+    color: white;
+    font-weight: 600;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+    }
+}
