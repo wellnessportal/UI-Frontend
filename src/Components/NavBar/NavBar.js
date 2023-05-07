@@ -62,6 +62,9 @@ const NavBar = (props) => {
           Hi {currentUserName}
         </li>
         <li>
+          <Link to="/profile">Profile</Link>
+        </li>
+        <li>
           <LogOut changedLogging={changedLogging} />
         </li>
       </ul>

@@ -11,6 +11,7 @@ import {
   Explore,
   Addevent,
   Admin,
+  Profile,
 } from "./Containers";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -42,6 +43,7 @@ function App() {
             }
           />
           <Route exact path="/explore" element={<Explore />} />
+          <Route exact path="/profile" element = {<Profile />} />
           <Route
             exact
             path="/fitness"

@@ -8,4 +8,6 @@ export {default as Explore} from './User/Explore/Explore';
 export {default as Addevent} from './Admin/Addevent';
 export {default as Removeevent} from './Admin/Removeevent';
 export {default as Admin} from './Admin/Admin';
+export {default as Profile} from './User/Profile/Profile';
+
 

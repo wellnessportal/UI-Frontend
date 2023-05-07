@@ -13,6 +13,7 @@ const clientId =
   "383065311131-hb1rcpo5r29dotjfn7t89arccfh0141t.apps.googleusercontent.com";
 let currentUser="";
 let currentUserName="";
+let currentUserImage;
 
 function Login(props) {
   const adminEmail = "itspooja1607@gmail.com";
@@ -31,8 +32,10 @@ function Login(props) {
   const onSuccess = (res) => {
     console.log("Login Success: currentUser:", res.profileObj);
     console.log("Login Success: currentUser:", res.profileObj.email);
+    console.log("Login Success: currentUserImage:", res.profileObj.imageUrl);
     currentUser = res.profileObj.email;
     currentUserName = res.profileObj.name;
+    currentUserImage = res.profileObj.imageUrl;
 
     if(adminEmail === res.profileObj.email){
       props.setFlagAdmin(true);
@@ -81,3 +84,4 @@ function Login(props) {
 export default Login;
 export {currentUser};
 export{currentUserName};
+export{currentUserImage};
