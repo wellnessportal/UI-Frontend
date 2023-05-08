@@ -32,6 +32,15 @@ const Fitness = () => {
     axios.delete(`http://localhost:8080/api/v1/user/${currentUser}/event/${id}`).then(() => {
       console.log("event canceled!");
 
+      axios.put(`http://localhost:8080/api/v1/waitinglist/${id}`).then((response)=>{
+        if(response.data!=false){
+          console.log("person added from waiting list");
+          axios.delete(`http://localhost:8080/api/v1/waitinglist/${id}`).then(()=>{
+            console.log("one person removed from waiting list");
+          })
+        }
+      })
+
       swal({
         title: "Event Cancelled!",
         text: `Booking for ${name} has been cancelled!`,
