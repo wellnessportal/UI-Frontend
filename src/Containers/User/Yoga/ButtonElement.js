@@ -21,6 +21,9 @@ icon: "success"
     console.log(props.id);
       axios.put(`http://localhost:8080/api/v1/users/${currentUser}`+`/bookevent/${props.id}`).then((response) => {
       if(response.data=="Event successfully booked!")  {
+        axios.put(`http://localhost:8080/api/v1/users/increaserating/${currentUser}`).then(()=>{
+          console.log("Rating increased for "+{currentUser});
+        })
       swal({
           title: "Event Booked!!!",
           text: response.data,
