@@ -5,6 +5,7 @@ import "./Mindfulness.css";
 
 import Card from "react-bootstrap/Card";
 import ButtonElement from "../Yoga/ButtonElement";
+import ButtonAvailable from "../Yoga/ButtonAvailable";
 
 
 const apiUrl = `http://localhost:8080/api/v1/events/type/mindfulness`
@@ -40,6 +41,7 @@ const Mindfulness = () => {
             Time:{mind.time}
           </Card.Text>
           <ButtonElement onClick="onClick" id={mind.id}></ButtonElement>
+          <ButtonAvailable onClick="onClick" id={mind.id}></ButtonAvailable>
           {/* <Button variant="primary" onClick={()=>alert("You have booked the event Successfully!")}>Book Now</Button> */}
         </Card.Body>
       </Card>

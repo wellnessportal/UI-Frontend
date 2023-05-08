@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Fitness.css";
 import Card from "react-bootstrap/Card";
 import ButtonElement from "../Yoga/ButtonElement";
+import ButtonAvailable from "../Yoga/ButtonAvailable";
 
 
 const apiUrl = `http://localhost:8080/api/v1/events/type/fitness`
@@ -39,6 +40,7 @@ const Fitness = () => {
 
           {/* <button variant="primary" onClick={()=>alert("You have booked the event Successfully!")}>Book Now</button> */}
           <ButtonElement onClick="onClick" id={post.id}></ButtonElement>
+          <ButtonAvailable onClick="onClick" id={post.id}></ButtonAvailable>
         </Card.Body>
       </Card>
     </>

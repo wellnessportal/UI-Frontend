@@ -9,23 +9,37 @@ const ButtonElement = (props) => {
   //so that for events that are already booked will have greyed buttons
   axios.get(`http://localhost:8080/api/v1/user/${currentUser}/event/${props.id}`).then((response) => {
     setBook(response.data);
-    })
+    });
   
   function handleClick(){
-    swal({
+    /*swal({
       title: "Event Booked!!!",
       text: `You have successfully reserved your position for the event.
   Check your Home Page to see your Booked Events :)`,
 icon: "success"
-    })
+    })*/
     console.log(props.id);
-      axios.put(`http://localhost:8080/api/v1/users/${currentUser}`+`/bookevent/${props.id}`).then(() => {
+      axios.put(`http://localhost:8080/api/v1/users/${currentUser}`+`/bookevent/${props.id}`).then((response) => {
+      if(response.data=="Event successfully booked!")  {
+      swal({
+          title: "Event Booked!!!",
+          text: response.data,
+    icon: "success"
+        })}
+        else{
+          swal({
+            title: "Event fully booked!",
+            text: response.data,
+      icon: "info"
+          })
+        }
         setBook(true);
         console.log("event booked!");
         console.log(book);
       })
       
       console.log("value of book after booking",book);
+
   }
   return (
     <Button onClick={handleClick} disabled={book}>{book?"Booked": "Book Now"}</Button>

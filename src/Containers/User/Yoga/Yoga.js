@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import { currentUser } from "../../../Components/Log/LogIn";
 import swal from 'sweetalert';
 import ButtonElement from "./ButtonElement";
+import ButtonAvailable from "./ButtonAvailable";
 
 //const apiUrl = `http://localhost:8080/api/v1/events/all`
 const apiUrl = `http://localhost:8080/api/v1/events/type/yoga`
@@ -45,6 +46,7 @@ const Yoga = () => {
             Time:{post.time}
           </Card.Text>
           <ButtonElement onClick="onClick" id={post.id}></ButtonElement>
+          <ButtonAvailable onClick="onClick" id={post.id}></ButtonAvailable>
           {/* <Button variant="primary" onClick = {() => handleClick(post.id)}>Book Now</Button> */}
         </Card.Body>
       </Card>
