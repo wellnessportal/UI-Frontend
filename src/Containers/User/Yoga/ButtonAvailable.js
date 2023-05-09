@@ -25,10 +25,10 @@ const ButtonAvailable = (props) => {
     function handleClick(){
       console.log(props.id);
       console.log("event id - "+ eventid);
-      console.log("user email - "+currentUser);
+      console.log("user email - "+ currentUser);
       console.log("size of wt - "+size);
 
-        axios.post(apiUrl,{position: size,email_id:currentUser,event_id:eventid}).then((response) => {
+        axios.post(apiUrl,{position: size,email_id: currentUser,event_id: eventid}).then((response) => {
                 swal({
                     title: "Waiting list",
                     text: response.data,
