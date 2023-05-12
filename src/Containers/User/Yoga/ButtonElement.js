@@ -23,6 +23,10 @@ icon: "success"
       if(response.data=="Event successfully booked!")  {
         axios.put(`http://localhost:8080/api/v1/users/increaserating/${currentUser}`).then(()=>{
           console.log("Rating increased for "+{currentUser});
+          axios.get(`http://localhost:8080/api/v1/rewards/${currentUser}/${response.data}`).then((res)=>{
+            console.log(res.data);
+            console.log(`http://localhost:8080/api/v1/rewards/${currentUser}/${response.data}`);
+          })
         })
       swal({
           title: "Event Booked!!!",
