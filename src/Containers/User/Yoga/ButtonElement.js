@@ -26,9 +26,10 @@ icon: "success"
         })
       swal({
           title: "Event Booked!!!",
-          text: response.data,
+          text: response.data + " Check your Home Page to see your Booked Events",
     icon: "success"
-        })}
+        })
+      }
         else{
           swal({
             title: "Event fully booked!",

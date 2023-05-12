@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/esm/Container";
@@ -8,12 +8,15 @@ import "./Addevent.css";
 import {useState, useEffect} from "react"
 import axios from "axios";
 import swal from "sweetalert";
+import ViewUsers from "./ViewUsers";
+
 
 const apiUrl = `http://localhost:8080/api/v1/events/all`
 const Removeevent = () => {
 const [postAllEvents, setPostAllEvents] = useState([]);
 useEffect(() => {
    axios.get(apiUrl).then((response) => {
+    console.log(response.data);
      setPostAllEvents(response.data);
    })
  }, [setPostAllEvents]);
@@ -36,7 +39,8 @@ useEffect(() => {
       }
     })
   }
-      const allEvents = postAllEvents.map((event) => (
+
+  const allEvents = postAllEvents.map((event) => (
         <>
         <Container className="cont">
         <Row>
@@ -47,6 +51,7 @@ useEffect(() => {
           <Col>
             {" "}
             <Button type="submit" onClick = {() => deleteEvent(event.id)}>REMOVE EVENT</Button>
+            <ViewUsers onClick="onCLick" id={event.id}></ViewUsers>
           </Col>
         </Row>
       </Container>
@@ -58,7 +63,7 @@ useEffect(() => {
               <Link className="l1" to="/admin">
                 Add Events
               </Link>
-              <Link className="l1" to="/removeevent">
+              <Link className="l1" to="/admin/removeevent">
                 Remove Events
               </Link>
             </div>

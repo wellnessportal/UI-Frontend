@@ -19,14 +19,14 @@ const Profile = () => {
         <h1 className="text-styling">Welcome {currentUserName}</h1>
         <div className = "center">
             <div className="div-items">
-                <img className = "profile" src={currentUserImage} alt="User image"/>
+                <img className = "profile" src={currentUserImage} alt="User image" referrerpolicy="no-referrer"/>
                 <img src={arrow} alt="arrow image"/>
                 <div className="rating-circle">
                     <h1>{rating}%</h1>
                 </div>
             </div>
         </div>
-        <h2 className="text-align">You are {rating}% closer to absolute wellbeing!</h2>
+        <h2 className="text-align">You are {rating}% close to absolute wellbeing!</h2>
         <p className="para-style">Exciting rewards awaits you! But first, let's boost up your rating.</p>
     </>
     );
