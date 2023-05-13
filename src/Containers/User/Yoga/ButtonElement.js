@@ -12,19 +12,13 @@ const ButtonElement = (props) => {
     });
   
   function handleClick(){
-    /*swal({
-      title: "Event Booked!!!",
-      text: `You have successfully reserved your position for the event.
-  Check your Home Page to see your Booked Events :)`,
-icon: "success"
-    })*/
     console.log(props.id);
       axios.put(`http://localhost:8080/api/v1/users/${currentUser}`+`/bookevent/${props.id}`).then((response) => {
       if(response.data=="Event successfully booked!")  {
-        axios.put(`http://localhost:8080/api/v1/users/increaserating/${currentUser}`).then(()=>{
-          console.log("Rating increased for "+{currentUser});
-          axios.post(`http://localhost:8080/api/v1/userrewards/${currentUser}`).then(()=>{
-              console.log("The getrandom reward api is "+`http://localhost:8080/api/v1/userrewards/${currentUser}`);
+        axios.put(`http://localhost:8080/api/v1/users/increaserating/${currentUser}`).then((ree)=>{
+          console.log("Rating increased for "+{currentUser}+ree.data);
+          axios.post(`http://localhost:8080/api/v1/userrewards/${currentUser}`).then((res)=>{
+              console.log("the response was "+res.data);
           })
         })
       swal({
